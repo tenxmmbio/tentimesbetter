@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ten Times Better Multimedia Studio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0b1b3a;
+      color: white;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* === Header === */
+    header {
+      background: linear-gradient(to right, #0b1b3a, #112e66);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    header .logo h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    /* === Grid Cards === */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .card {
+      background: #112e66;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
+    /* === Buttons === */
+    .btn-primary {
+      background: #00aaff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #008fcc;
+    }
+
+    /* === Blog === */
+    .blog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .blog-post {
+      background: #112e66;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    /* === Contact === */
+    form input, form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      width: 100%;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #08142a;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header>
+    <div class="logo">
+      <!-- Replace logo.png with your actual logo -->
+      <img src="logo.png" alt="Ten Times Better Logo">
+      <h1>Ten Times Better Studio</h1>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#products">Products</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Photography</h3><p>Creative shots that capture timeless moments.</p></div>
+      <div class="card"><h3>Videography</h3><p>High-quality video production for events & brands.</p></div>
+      <div class="card"><h3>Graphic Design</h3><p>Modern, sleek designs that tell your story.</p></div>
+      <div class="card"><h3>Website Design</h3><p>Responsive and professional websites tailored to your business.</p></div>
+    </div>
+    <a href="#contact" class="btn-primary">Hire Us / Request a Quote</a>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Showcase of works coming soon...</p>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <h2>Digital Products</h2>
+    <div class="grid">
+      <div class="card"><h3>Lightroom Presets</h3><p>Make your photos pop instantly.</p><a href="#" class="btn-primary">Buy Now</a></div>
+      <div class="card"><h3>Design Templates</h3><p>Ready-to-use templates for creatives.</p><a href="#" class="btn-primary">Buy Now</a></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2>Latest Articles</h2>
+    <div class="blog">
+      <div class="blog-post">
+        <h3>5 Tips for Stunning Photos</h3>
+        <p>Learn how to capture professional-level shots with just your smartphone.</p>
+        <a href="#" class="btn-primary">Read More</a>
+      </div>
+      <div class="blog-post">
+        <h3>Why Every Business Needs a Website</h3>
+        <p>Discover the benefits of having a professional online presence.</p>
+        <a href="#" class="btn-primary">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Message sent (simulation)'); return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+    <p>Email: tentimesbetter2006@gmail.com</p>
+    <p>WhatsApp: <a href="https://wa.me/2349116541398" target="_blank" style="color:#00aaff;">Chat with us</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ten Times Better Multimedia Studio. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
