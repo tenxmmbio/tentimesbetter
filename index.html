@@ -102,7 +102,7 @@
       border-radius: 10px;
     }
 
-    /* === Contact === */
+    /* === Contact 
     form input, form textarea {
       width: 100%;
       margin: 0.5rem 0;
@@ -113,7 +113,33 @@
     form button {
       width: 100%;
     }
+    ===*/
+    .card-link {
+  text-decoration: none;
+  color: inherit;
+}
 
+.card {
+  background-color: #101c3b;
+  color: #fff;
+  border-radius: 10px;
+  width: 130px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #1d2d5c;
+      }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     /* === Footer === */
     footer {
       background: #08142a;
@@ -199,7 +225,7 @@
     <p>WhatsApp: <a href="https://wa.me/2349116541398" target="_blank" style="color:#00aaff;">Chat with us</a></p>
   </section> 
   -->
-  <!-- Contact -->
+  <!-- Contact 
 <section id="contact">
   <h2>Get in Touch</h2>
   <p>If you'd like to connect with us, feel free to reach out through any of the platforms below:</p>
@@ -221,8 +247,43 @@
       <i class="fab fa-instagram"></i> Instagram
     </a>
   </div>
-</section>
+</section>-->
+<!-- Contact -->
+<section id="contact">
+  <h2 style="text-align: center;">Get in Touch</h2>
+  <p style="text-align: center;">Reach out through any platform below. We’d love to hear from you!</p>
 
+  <div class="contact-cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+    
+    <a href="mailto:tentimesbetter2006@gmail.com" target="_blank" class="card-link">
+      <div class="card">
+        <i class="fas fa-envelope"></i>
+        <p>Email</p>
+      </div>
+    </a>
+
+    <a href="https://wa.me/2349116541398" target="_blank" class="card-link">
+      <div class="card">
+        <i class="fab fa-whatsapp"></i>
+        <p>WhatsApp</p>
+      </div>
+    </a>
+
+    <a href="https://facebook.com/yourusername" target="_blank" class="card-link">
+      <div class="card">
+        <i class="fab fa-facebook"></i>
+        <p>Facebook</p>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/yourusername" target="_blank" class="card-link">
+      <div class="card">
+        <i class="fab fa-instagram"></i>
+        <p>Instagram</p></div>
+    </a>
+
+  </div>
+</section>
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Ten Times Better Multimedia Studio. All Rights Reserved.</p>
