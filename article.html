@@ -1,50 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles - Ten Times Better</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles - TenTimesBetter</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header { background: #111; color: #fff; padding: 20px; text-align: center; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 900px; margin: 30px auto; padding: 0 15px; }
-    .article-card {
-      background: #fff; padding: 20px; margin-bottom: 20px;
-      border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+    /* Theme: dark with cyan highlights */
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
     }
-    .article-card:hover { transform: translateY(-3px); }
-    .article-card h2 { margin-top: 0; color: #222; }
-    .article-card p { color: #666; }
-    footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
+
+    header {
+      background: #222;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #f8f8f8;
+      letter-spacing: 0.3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    nav a {
+      color: #cfeffd;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: rgba(0,188,212,0.08);
+      color: #00bcd4;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 0 18px 40px;
+    }
+
+    .top-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: #00bcd4;
+      margin: 0 0 18px 0;
+    }
+
+    .back-home {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #00bcd4;
+      color: #081018;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(0,188,212,0.10);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .back-home:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,188,212,0.12); }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,188,212,0.12);
+    }
+
+    .card h3 {
+      color: #e6f9fb;
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
+    }
+    .card p {
+      color: #c9d1d9;
+      margin: 0 0 14px 0;
+      flex-grow: 1;
+    }
+
+    .card .meta {
+      color: #98a0a6;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .card .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .read-btn {
+      padding: 10px 16px;
+      background: #00bcd4;
+      color: #081018;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background .15s ease;
+    }
+    .read-btn:hover { background: #0097a7; }
+
+    .placeholder {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 22px 18px;
+      text-align: center;
+      color: #9aa6ac;
+      background: transparent;
+    }
+
+    @media (max-width: 520px) {
+      header { padding: 14px; }
+      .brand h1 { font-size: 1rem; }
+      .back-home { padding: 9px 12px; }
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📚 Our Articles</h1>
+    <div class="brand">
+      <h1>TenTimesBetter</h1>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
-      <a href="article.html">Articles</a>
+      <a href="articles.html" aria-current="page">Articles</a>
     </nav>
   </header>
 
-  <main>
-    <div class="article-card">
-      <h2><a href="article1.html">5 Tips for Stunning Photos</a></h2>
-      <p>Learn quick hacks to make your photos look professional.</p>
+  <main class="container">
+    <div class="top-actions">
+      <h2>Latest Articles</h2>
+      <!-- Prominent Back to Home button -->
+      <a class="back-home" href="index.html">â† Back to Home</a>
     </div>
 
-    <div class="article-card">
-      <h2><a href="article/article2.html">Why Every Business Needs a Website</a></h2>
-      <p>Discover how a website boosts credibility and attracts more clients.</p>
+    <div class="articles">
+
+      <!-- Article 1 -->
+      <article class="card">
+        <div>
+          <div class="meta">Photography â€¢ Tips â€¢ 2025</div>
+          <h3>5 Tips for Stunning Photos</h3>
+          <p>Learn how to capture professional-level shots with just your smartphone â€” lighting, composition and editing explained simply.</p>
+        </div>
+        <div class="actions">
+          <a class="read-btn" href="articles/article1.html">Read More</a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="card">
+        <div>
+          <div class="meta">Business â€¢ Website â€¢ 2025</div>
+          <h3>Why Every Business Needs a Website</h3>
+          <p>Discover the benefits of having a professional online presence and how it helps convert visitors into customers.</p>
+        </div>
+        <div class="actions">
+          <a class="read-btn" href="articles/article2.html">Read More</a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="card">
+        <div>
+          <div class="meta">Social Media â€¢ Branding â€¢ 2025</div>
+          <h3>How to Grow Your Brand with Social Media</h3>
+          <p>Simple, repeatable strategies for increasing reach and building a loyal audience using short videos and consistent visuals.</p>
+        </div>
+        <div class="actions">
+          <a class="read-btn" href="articles/article3.html">Read More</a>
+        </div>
+      </article>
+
+      <!-- Placeholder / Coming soon -->
+      <article class="card">
+        <div>
+          <div class="meta">Coming Soon</div>
+          <h3 class="placeholder">New article on the way</h3>
+          <p class="placeholder">Youâ€™ll see more helpful guides here soon â€” check back later or subscribe (if you add a newsletter).</p>
+        </div>
+        <div class="actions">
+          <a class="read-btn" href="#">Read More</a>
+        </div>
+      </article>
+
     </div>
   </main>
 
   <footer>
-    <p>© 2025 Ten Times Better Multimedia</p>
+    Â© 2025 Ten Times Better Multimedia
   </footer>
+
 </body>
 </html>
