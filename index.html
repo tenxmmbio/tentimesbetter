@@ -52,7 +52,7 @@
       color: #00aaff;
     }
 
-    /* === Grid Cards === */
+    /* === Grid Cards
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -71,6 +71,22 @@
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.6);
     }
+    === */
+        .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #112e66;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .cardn {
+  text-decoration: none;
+  color: inherit;
+          }
 
     /* === Buttons === */
     .btn-primary {
@@ -129,6 +145,7 @@
   background-color: #1d2d5c;
       }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     /* === Footer === */
     footer {
       background: #08142a;
